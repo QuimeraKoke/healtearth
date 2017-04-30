@@ -9,5 +9,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('API.urls')),
-    url(r'^$', views.form),
+    url(r'^$', views.index),
+    url(r'^form/$', views.form),
 ]

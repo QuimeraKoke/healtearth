@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,7 @@
     </style>-->
     <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../statics/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 </head>
 <body>
     <!--<form action="">
@@ -38,7 +39,7 @@
    <header>
         <div class="row">
             <div class="col-md-2 pull-left div-logo">
-                <img src="../statics/img/logo250px.png" alt="logo" class="logo">
+                <img src="{% static 'img/logo250px.png' %}" alt="logo" class="logo">
             </div>
             <div class="title col-md-4">
                 <h3>Healtearth</h3>
@@ -65,21 +66,21 @@
         </div>
         <div class="row row-total">
             <div class="col-md-12">
-                <span><img src="../statics/img/total.png"></span><span>0 Kg</span>
+                <span><img src="{% static 'img/total.png' %}"></span><span>0 Kg</span>
             </div>
         </div>
         <div class="row searching-results">
             <div class="row">
                 <div class="height-10 col-md-1"><span class="food-type">Alimento</span></div>
-                <div class="height-10 col-md-10"><img src="../statics/img/hoja_amarilla.png"></div>
+                <div class="height-10 col-md-10"><img src="{% static 'img/hoja_amarilla.png' %}"></div>
                 <div class="height-10 col-md-1"><button>X</button></div>
             </div>    
             <div class="row row-waste">
                 <div class="col-md-6">
-                    <span><img src="../statics/img/yunque.png"></span><span>0Kg</span>
+                    <span><img src="{% static 'img/yunque.png' %}"></span><span>0Kg</span>
                 </div>
                 <div class="col-md-6">
-                    <span><img src="../statics/img/garbage.png"></span><span>0Kg</span>
+                    <span><img src="{% static 'img/garbage.png' %}"></span><span>0Kg</span>
                 </div>
             </div>
             <div class="row">
@@ -88,10 +89,10 @@
             </div>  
             <div class="row row-waste">
                 <div class="col-md-6">
-                    <span><img src="../statics/img/waterpolution.png"></span><span>0kg</span>
+                    <span><img src="{% static 'img/waterpolution.png' %}"></span><span>0kg</span>
                 </div>
                 <div class="col-md-6">
-                    <span><img src="../statics/img/airpolution.png"></span><span>0</span>
+                    <span><img src="{% static 'img/airpolution.png' %}"></span><span>0</span>
                 </div> 
             </div>      
        </div>

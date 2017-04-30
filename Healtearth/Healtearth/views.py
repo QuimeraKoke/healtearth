@@ -4,7 +4,7 @@ from API.models import Food
 
 @require_http_methods(["GET"])
 def index(request):
-	return 
+	return render(request, 'index.html')
 
 @require_http_methods(["GET", "POST"])
 def form(request):
