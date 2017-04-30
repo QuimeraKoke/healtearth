@@ -48,3 +48,12 @@ input {
 .height-10 img{
 	height: 5vh;
 }
+.row-waste, .row-waste div{
+	height: 10vh;
+}
+.row-waste div img{
+	height: 10vh;
+}
+.divider{
+	border: 1px solid black;
+}
