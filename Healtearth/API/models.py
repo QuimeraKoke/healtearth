@@ -9,5 +9,5 @@ class Food(models.Model):
 	water_pollution = models.DecimalField(max_digits=10, decimal_places=2)
 	garbage = models.DecimalField(max_digits=10, decimal_places=2)
 	grade = models.CharField(max_length=1)
-	alternatives = = models.ManyToManyField("self")
+	alternatives = models.ManyToManyField("self")
 		
