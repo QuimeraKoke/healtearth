@@ -10,4 +10,18 @@ class Food(models.Model):
 	garbage = models.DecimalField(max_digits=10, decimal_places=2)
 	grade = models.CharField(max_length=1)
 	alternatives = models.ManyToManyField("self")
-		
+
+	@staticmethod
+	def search(text):
+		filtered = Food.objects.filter(name__startswith=text)
+		return filtered
+
+	def dict_rep(self):
+		return {
+			'name' : self.name,
+			'label' : str(self.amount) + " " + self.unit,
+			'air' : self.air_pollution,
+			'water' : self.water_pollution,
+			'garbage' : self.garbage,
+			'grade' : self.grade,
+		}

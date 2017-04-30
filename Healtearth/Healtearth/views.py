@@ -1,9 +1,12 @@
 from django.shortcuts import render
+from django.views.decorators.http import require_http_methods
 from API.models import Food
 
+@require_http_methods(["GET"])
 def index(request):
 	return 
 
+@require_http_methods(["GET", "POST"])
 def form(request):
 	if request.method == 'POST':
 		print request.POST
