@@ -12,7 +12,8 @@
     </style>
 </head>
 <body>
-    <form action="">
+    <form action="" method="POST">
+        {% csrf_token %}
         <div class="labels">name:</div> 
         <input type="text" name="name"><br>
         <div class="labels">amount:</div>
