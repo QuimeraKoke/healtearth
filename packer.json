@@ -1,0 +1,68 @@
+{
+  "variables": {
+  },
+  "builders": [{
+    "type": "digitalocean",
+    "api_token": "",
+    "image": "ubuntu-16-04-x64",
+    "region": "nyc3",
+    "size": "512mb",
+    "ssh_username": "root",
+    "droplet_name": "packer",
+    "snapshot_name": "build-with-packer-{{timestamp}}"
+  }],
+  "provisioners": [{
+      "type": "shell",
+      "inline": [
+        "mkdir -p $HOME/project/assets",
+        "mkdir -p $HOME/project"
+      ]},
+    {
+      "type" : "file",
+      "source" : "assets/",
+      "destination" : "$HOME/project/assets"
+    },
+    {
+      "type" : "file",
+      "source" : "requirements.txt",
+      "destination" : "$HOME/project/"
+    },
+    {
+      "type" : "file",
+      "source" : "Healtearth/",
+      "destination" : "$HOME/project/"
+    },
+    {
+    "type":"shell",
+    "inline" : [
+      "sleep 30",
+      "cd $HOME",
+      "pwd",
+      "ls $HOME/project/",
+      "sudo apt-get update",
+      "sudo apt-get install python-pip -y",
+      "sudo pip install virtualenv",
+      "mkdir $HOME/virtual_envs",
+      "ls /root/",
+      "virtualenv $HOME/virtual_envs/healtearth",
+      "$HOME/virtual_envs/healtearth/bin/pip install --upgrade pip",
+      "ls $HOME/project/Healtearth",
+      "$HOME/virtual_envs/healtearth/bin/pip install -r $HOME/project/requirements.txt",
+      "sudo mkdir /var/healtearth",
+      "ln -s $HOME/project/Healtearth /var/healtearth/Code",
+      "sudo cp $HOME/project/assets/gunicorn.conf /etc/systemd/system/",
+      "sudo mv /etc/systemd/system/gunicorn.conf /etc/systemd/system/healtearth.service",
+      "sudo systemctl start healtearth.service",
+      "sudo systemctl enable healtearth.service",
+      "sudo systemctl status healtearth.service",
+      "sudo apt-get install nginx -y",
+      "sudo cp $HOME/project/assets/nginx.conf /etc/nginx/sites-available/",
+      "sudo ln -s /etc/nginx/sites-available/nginx.conf /etc/nginx/sites-enabled/codedeploy",
+      "sudo nginx -t",
+      "sudo systemctl reload nginx"
+    ]
+  }]
+
+}
+
+
