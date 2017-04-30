@@ -1,3 +1,23 @@
 .labels{
 	min-width: 100px;
 }
+header{
+	width: 100vw;
+	height: 15vh;
+	background-color: #b8d05b;
+}
+header .row{
+	height: 15vh;
+	padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.logo{
+	height: 10vh;
+	width: 17vh;
+}
+.logo img{
+	width: 100%;
+	height: auto;
+}
