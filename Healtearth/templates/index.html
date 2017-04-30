@@ -16,53 +16,95 @@
 </head>
 <body>
     <!--<form action="">
-        <div class="labels">name:</div> 
+        <div class="labels">name:</div>
         <input type="text" name="name"><br>
         <div class="labels">amount:</div>
         <input type="text" name="amount"><br>
         <div class="labels">unit:</div>
         <input type="text" name="unit"><br>
-        <div class="labels">air polition:</div> 
+        <div class="labels">air polition:</div>
         <input type="text" name="air"><br>
-        <div class="labels">water polution:</div> 
+        <div class="labels">water polution:</div>
         <input type="text" name="water"><br>
-        <div class="labels">garbage:</div> 
+        <div class="labels">garbage:</div>
         <input type="text" name="garbage"><br>
-        <div class="labels">grade:</div> 
+        <div class="labels">grade:</div>
         <input type="number" name="grade"><br>
         <input type="submit" value="subirs">
     </form>-->
 
 
 
-    <header>
-        <div class="row row-hader">
-            <div class="logo col-md-3"><img src="../statics/img/logo250px.png"></div>
-            <div class="title col-md-4">Titulo</div>
-            <div class="sections-buttons col-md-5">
+   <header>
+        <div class="row">
+            <div class="col-md-2 pull-left div-logo">
+                <img src="../statics/img/logo250px.png" alt="logo" class="logo">
+            </div>
+            <div class="title col-md-4">
+                <h3>Healtearth</h3>
+            </div>
+            <div class="dropdown col-md-5 hola" id="#myDropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
                 <nav>
-                    <ul>
-                        <li><a href="#nowhere">Lorem</a></li>
-                        <li><a href="#nowhere">Aliquam</a></li>
-                        <li><a href="#nowhere">Morbi</a></li>
-
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Lorem</a></li>
+                        <li><a href="#">Aliquam</a></li>
+                        <li><a href="#">Morbi</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    <section class="main-section">
+    <section class="main-section container">
         <div class="searcher row">
-            
+            <input class="form-control input-lg glyphicon glyphicon-ok" type="text" id="inputSucces">
+            <a href="#" type="submit" class="glyphicon glyphicon-search search pull-right" aria-hidden="true"></a>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <span></span><span></span>
+            </div>
         </div>
         <div class="row searching-results">
-            
-        </div>
+            <div class="row">
+                <div class="height-10 col-md-1"><span class="food-type">Alimento</span></div>
+                <div class="height-10 col-md-10"><img src="../statics/img/hoja_amarilla.png"></div>
+                <div class="height-10 col-md-1"><button>X</button></div>
+            </div>    
+            <div class="row">
+                <div class="col-md-6">
+                    <span><img src="../statics/img/yunque.png"></span><span>0Kg</span>
+                </div>
+                <div class="col-md-6">
+                    <span><img src="../statics/img/garbage.png"></span><span>0Kg</span>
+                </div>
+            </div>
+            <div class="row">
+                <p>POLLUTION</p>
+                <div class="divider"></div>
+            </div>  
+            <div class="row">
+                <div class="col-md-6">
+                    <span><img src="../statics/img/waterpolution.png"></span><span>0kg</span>
+                </div>
+                <div class="col-md-6">
+                    <span><img src="../statics/img/airpolution.png"></span><span>0</span>
+                </div> 
+            </div>      
+       </div>
     </section>
     <footer>
         <div class="row">
             
-        </div>
+       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../statics/js/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

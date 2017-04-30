@@ -1,23 +1,50 @@
 .labels{
-	min-width: 100px;
+    min-width: 100px;
 }
-header{
-	width: 100vw;
-	height: 15vh;
-	background-color: #b8d05b;
+.row{
+	margin-left: 0!important;
+	margin-right: 0!important;
 }
-header .row{
-	height: 15vh;
-	padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    align-content: center;
+header {
+    background-color: #b8d05b ;
+    margin-bottom: 50px;
 }
-.logo{
+.logo {
+    width: 60px;
+    padding: 9px 0px 15px 10px;
+}
+.div-logo {
+    width: 5%;
+}
+h3 {
+    color: #fff;
+    font-weight: bold;
+    margin-left: 6px;
+}
+input {
+    background-color: #dcedc8 !important;
+    padding: 33px 16px !important;
+    border: 0 !important;
+}
+.searcher, .searching-results {
+    margin: 0 80px 0 80px !important;
+}
+.search {
+    top: -39px;
+    color: #727272 !important;
+    margin-right: 20px;
+}
+.searching-results {
+	background-color: #ededed;
+}
+.food-type{
+	text-decoration: underline;
+	color: black;
+	font-weight: bold;
+}
+.searching-results .row .height-10, .searching-results .row{
 	height: 10vh;
-	width: 17vh;
 }
-.logo img{
-	width: 100%;
-	height: auto;
+.height-10 img{
+	height: 5vh;
 }
